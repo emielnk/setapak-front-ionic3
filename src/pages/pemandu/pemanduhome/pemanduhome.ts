@@ -22,4 +22,20 @@ export class PemanduhomePage {
     console.log('ionViewDidLoad PemanduhomePage');
   }
 
+  navMyHomestay() {
+    this.navCtrl.push("PemandulisthomestayPage");
+  }
+
+  navMyProduct() {
+    this.navCtrl.push("PemandulistproductPage");
+  }
+
+  navMyService() {
+    this.navCtrl.push("PemandulistservicePage");
+  }
+
+  navPemanduEditProfile() {
+    this.navCtrl.push("PemandueditPage");
+  }
+
 }

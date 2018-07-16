@@ -79,10 +79,6 @@ export class HomestaydetailPage {
     });
   }
 
-  
-    
-    
-  
   getDataHomestay(idHomestay){    
     this.http.get(this.userData.BASE_URL+"api/homestay/"+idHomestay,this.options).subscribe(data => {
       let response = data.json();
@@ -98,7 +94,6 @@ export class HomestaydetailPage {
    });
   }
 
-  
 
   getHomestayPhoto(idHomestay){
     this.http.get(this.userData.BASE_URL+"api/picture/homestay/"+idHomestay,this.options).subscribe(data => {

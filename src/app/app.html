@@ -1,15 +1,44 @@
 <ion-menu [content]="content">
     <ion-header>
         <ion-toolbar>
-        <ion-title>Menu</ion-title>
+            <ion-title>Menu</ion-title>
         </ion-toolbar>
     </ion-header>
 
     <ion-content>
         <ion-list>
-        <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-            {{p.title}}
-        </button>
+            <div padding-bottom>
+                <ion-card class="full-card">          
+                    <button  ion-item (click) = "navNewHomestay()">
+                        <h5><b>New Homestay</b></h5>
+                        <ion-icon color= "navbar" name="arrow-dropright" item-right></ion-icon>
+                    </button>         
+                </ion-card>
+            </div>
+            <div padding-bottom>
+                <ion-card class="full-card">          
+                    <button  ion-item (click)="navNewTourService()">
+                        <h5><b>New Services</b></h5>
+                        <ion-icon color= "navbar" name="arrow-dropright" item-right></ion-icon>
+                    </button>         
+                </ion-card>
+            </div>
+            <div padding-bottom>
+                <ion-card class="full-card">          
+                    <button  ion-item (click) = "navNewProduct()">
+                        <h5><b>New Product</b></h5>
+                        <ion-icon color= "navbar" name="arrow-dropright" item-right></ion-icon>
+                    </button>         
+                </ion-card>
+            </div>
+            <div padding-bottom>
+                <ion-card class="full-card" (click)="navRegis()">          
+                    <button  ion-item>
+                        <h5><b>Registrations</b></h5>
+                        <ion-icon color= "navbar" name="arrow-dropright" item-right></ion-icon>
+                    </button>         
+                </ion-card>
+            </div>
         </ion-list>
     </ion-content>
 </ion-menu>

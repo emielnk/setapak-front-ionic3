@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { NgModule, ErrorHandler } from '@angular/core';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { IonicApp, IonicModule, IonicErrorHandler, IonicPageModule } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -27,12 +27,18 @@ import { ProfileAccountPage } from '../pages/profileaccount/profileaccount';
 import { PemanduhistoryPage } from '../pages/pemandu/pemanduhistory/pemanduhistory';
 import { PemandumenuPage } from '../pages/pemandu/pemandumenu/pemandumenu';
 import { PemanduhomePage } from '../pages/pemandu/pemanduhome/pemanduhome';
+import { PemanduregisPage } from '../pages/pemandu/pemanduregis/pemanduregis';
+
 //provider
 import { UserData } from '../providers/user-data';
 import { AlertService } from '../providers/util/alert.service';
 import { Storage } from '@ionic/storage';
 import { File } from '@ionic-native/file';
 import { HomestayData } from '../providers/homestay-data/homestay-data';
+import { FileTransfer, FileUploadOptions, FileTransferObject } from '../../node_modules/@ionic-native/file-transfer';
+import { Camera } from '@ionic-native/camera';
+import { ImagePicker } from '@ionic-native/image-picker';
+import { Base64 } from '@ionic-native/base64';
 
 //component module
 
@@ -57,13 +63,14 @@ export function getAuthHttp(http, Storage) {
     PemanduhistoryPage,
     PemandumenuPage,
     PemanduhomePage
+    // PemanduregisPage
   ],
   imports: [
     BrowserModule,
     HttpModule,
     BrowserAnimationsModule,
     IonicModule.forRoot(MyApp),    
-    IonicStorageModule.forRoot(),    
+    IonicStorageModule.forRoot(),  
     FormsModule
   ],
 
@@ -79,6 +86,7 @@ export function getAuthHttp(http, Storage) {
     PemanduhistoryPage,
     PemandumenuPage,
     PemanduhomePage
+    // PemanduregisPage
   ],
   providers: [
     StatusBar,
@@ -90,6 +98,11 @@ export function getAuthHttp(http, Storage) {
     FileChooser,
     FileOpener,  
     File,
+    FileTransfer,
+    FileTransferObject,
+    Camera,
+    ImagePicker,
+    Base64,
     {
       provide: AuthHttp,
       useFactory: getAuthHttp,
