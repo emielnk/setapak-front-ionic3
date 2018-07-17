@@ -7,7 +7,7 @@
 
     <ion-content>
         <ion-list>
-            <div padding-bottom>
+            <div>
                 <ion-card class="full-card">          
                     <button  ion-item (click) = "navNewHomestay()">
                         <h5><b>New Homestay</b></h5>
@@ -15,7 +15,7 @@
                     </button>         
                 </ion-card>
             </div>
-            <div padding-bottom>
+            <div>
                 <ion-card class="full-card">          
                     <button  ion-item (click)="navNewTourService()">
                         <h5><b>New Services</b></h5>
@@ -23,7 +23,7 @@
                     </button>         
                 </ion-card>
             </div>
-            <div padding-bottom>
+            <div>
                 <ion-card class="full-card">          
                     <button  ion-item (click) = "navNewProduct()">
                         <h5><b>New Product</b></h5>
@@ -31,10 +31,18 @@
                     </button>         
                 </ion-card>
             </div>
-            <div padding-bottom>
-                <ion-card class="full-card" (click)="navRegis()">          
+            <div>
+                <ion-card class="full-card">          
+                    <button  ion-item (click) = "navMyProdukAll()">
+                        <h5><b>Produk saya</b></h5>
+                        <ion-icon color= "navbar" name="arrow-dropright" item-right></ion-icon>
+                    </button>         
+                </ion-card>
+            </div>
+            <div>
+                <ion-card class="full-card" (click)="navHistoryTransaksi()">          
                     <button  ion-item>
-                        <h5><b>Registrations</b></h5>
+                        <h5><b>History Transaksi</b></h5>
                         <ion-icon color= "navbar" name="arrow-dropright" item-right></ion-icon>
                     </button>         
                 </ion-card>

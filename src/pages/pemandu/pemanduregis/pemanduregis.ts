@@ -81,7 +81,7 @@ export class PemanduregisPage {
         deskripsi: this.pemandu.deskripsi,
       });
       console.log(input)
-      this.http.post(this.userData.BASE_URL+"api/regispemandu/create/post", input, this.options).subscribe(data => {
+      this.http.post(this.userData.BASE_URL + "api/regispemandu/create/post", input, this.options).subscribe(data => {
         loading.dismiss();
         let response = data.json();           
         this.showAlert(response.message);

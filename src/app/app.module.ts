@@ -12,6 +12,7 @@ import { FileChooser } from '@ionic-native/file-chooser';
 import { FileOpener } from '@ionic-native/file-opener';
 import { Http } from '@angular/http';
 import { AuthHttp, AuthConfig } from 'angular2-jwt';
+import { NavController } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 
@@ -39,7 +40,12 @@ import { FileTransfer, FileUploadOptions, FileTransferObject } from '../../node_
 import { Camera } from '@ionic-native/camera';
 import { ImagePicker } from '@ionic-native/image-picker';
 import { Base64 } from '@ionic-native/base64';
+import { SuperTabsModule } from 'ionic2-super-tabs';
 
+
+import { PemanadufailedPage } from '../pages/pemandu/pemanadufailed/pemanadufailed';
+import { PemanadusuksesPage } from '../pages/pemandu/pemanadusukses/pemanadusukses';
+import { PemanaduprogressPage } from '../pages/pemandu/pemanaduprogress/pemanaduprogress';
 //component module
 
 //set the auth http for API
@@ -60,9 +66,12 @@ export function getAuthHttp(http, Storage) {
     MyaccountPage,    
     TabsPage,
     ProfileAccountPage,
-    PemanduhistoryPage,
+    // PemanduhistoryPage,
     PemandumenuPage,
-    PemanduhomePage
+    PemanduhomePage,
+    // PemanadufailedPage,
+    // PemanadusuksesPage,
+    // PemanaduprogressPage
     // PemanduregisPage
   ],
   imports: [
@@ -71,7 +80,8 @@ export function getAuthHttp(http, Storage) {
     BrowserAnimationsModule,
     IonicModule.forRoot(MyApp),    
     IonicStorageModule.forRoot(),  
-    FormsModule
+    FormsModule,
+    SuperTabsModule,
   ],
 
   bootstrap: [IonicApp],
@@ -83,9 +93,12 @@ export function getAuthHttp(http, Storage) {
     MyaccountPage,
     TabsPage,
     ProfileAccountPage,
-    PemanduhistoryPage,
+    // PemanduhistoryPage,
     PemandumenuPage,
-    PemanduhomePage
+    PemanduhomePage,
+    // PemanadufailedPage,
+    // PemanadusuksesPage,
+    // PemanaduprogressPage
     // PemanduregisPage
   ],
   providers: [
@@ -108,7 +121,7 @@ export function getAuthHttp(http, Storage) {
       useFactory: getAuthHttp,
       deps: [Http, Storage]
     },
-    HomestayData
+    HomestayData,
   ]
 })
 export class AppModule {}

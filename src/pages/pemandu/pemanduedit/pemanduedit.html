@@ -14,5 +14,53 @@
 
 
 <ion-content padding>
-
+    <ion-card>
+        <ion-card-header>
+          Edit Profile Anda
+        </ion-card-header>
+        <ion-card-content>
+          <form #newHomestay="ngForm">
+              <ion-list no-lines padding-right>
+                  <ion-item>
+                    <ion-label stacked color="primary">Nama Homestay</ion-label>
+                    <ion-input placeholder="Value Old" name="nama" type="text" required>
+                    </ion-input>
+                  </ion-item> 
+                  <ion-item> 
+                    <ion-label stacked color="primary">Alamat Perusahaan</ion-label>
+                    <ion-textarea placeholder="Old Value" name="nama" type="text" required>
+                    </ion-textarea>
+                  </ion-item>
+                  <ion-item> 
+                    <ion-label stacked color="primary">Deskripsi Homestay</ion-label>
+                      <ion-textarea placeholder="Old Value" name="nama" type="text" required>
+                      </ion-textarea>
+                  </ion-item>
+                  <div class="uploadphoto">
+                    <ion-label stacked color="primary">Pilih Foto</ion-label>
+                    <ion-item>
+                      <p>lokasi/file/photo.jpg</p>
+                      <button ion-button color="secondary" (click)="getImage()">Get Image</button>
+                    </ion-item>
+                    <ion-item>
+                      <h4>Image Preview</h4>
+                      <img src="{{imageFileName}}" *ngIf="imageFileName" alt="Ionic File" width="300" />
+                    </ion-item>
+                    <ion-item>
+                      <button ion-button (click)="editProfilePost()">Upload</button>
+                    </ion-item>
+                  </div>        
+              </ion-list>
+              <div padding>
+                  <button ion-button type="submit" (click)="onSignup(signupForm)" block>Simpan</button>
+                </div>
+          </form>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+          <button color="danger" ion-button (click)="nonAktifkanPerusahaan">
+              <ion-icon name="warning"></ion-icon> <label> non aktifkan toko</label>
+          </button>
+      </ion-card>
 </ion-content>
+

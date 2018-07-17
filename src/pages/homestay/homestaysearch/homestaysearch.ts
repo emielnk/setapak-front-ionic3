@@ -57,7 +57,9 @@ export class HomestaysearchPage {
     
   }
 
-  getProvinsi(){    
+  getProvinsi(){
+    console.log(this.options)
+    console.log(this.userData.BASE_URL+"api/alamat/provinsi")
     this.http.get(this.userData.BASE_URL+"api/alamat/provinsi",this.options).subscribe(data => {
       let response = data.json();
       if(response.status==200) {
@@ -142,7 +144,8 @@ export class HomestaysearchPage {
     this.loading = this.loadCtrl.create({
         content: 'Tunggu sebentar...'
     });
-
+    console.log(this.options)
+    console.log(this.userData.BASE_URL+"api/homestay/search")
     if (form.valid) {
       this.loading.present();
       let input = JSON.stringify({

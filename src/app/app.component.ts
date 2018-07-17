@@ -1,15 +1,13 @@
 import { Component,ViewChild } from '@angular/core';
-import { Platform, Nav, App} from 'ionic-angular';
+import { Platform, Nav,NavController, App} from 'ionic-angular';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
-
 import { UserData } from '../providers/user-data';
-import { PemanduhomePage } from '../pages/pemandu/pemanduhome/pemanduhome';
-import { PemandumenuPage } from '../pages/pemandu/pemandumenu/pemandumenu';
-import { PemanduregisPage } from '../pages/pemandu/pemanduregis/pemanduregis'
+
+
 
 @Component({
   templateUrl: 'app.html'
@@ -82,4 +80,13 @@ export class MyApp {
   navNewProduct() {
     this.navChild.push("PemanduprodukPage")
   }
+
+  navHistoryTransaksi() {
+    this.navChild.push("PemanduhistoryallPage");
+  }
+
+  navMyProdukAll() {
+    this.navChild.push("PemandumyproductsPage");
+  }
+  
 }

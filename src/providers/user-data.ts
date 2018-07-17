@@ -7,7 +7,7 @@ import { AuthHttp } from 'angular2-jwt';
 export class UserData {
   HAS_LOGGED_IN = 'hasLoggedIn';
   HAS_BE_TOUR_GUIDE = 'hasBeTourGuide'
-  BASE_URL = 'http://setapakbogor.site/';     
+  BASE_URL = 'setapakbogor.site/';     
   data:any;
   idUser: any;
   token: string;
