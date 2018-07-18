@@ -26,6 +26,7 @@ export class PemanduhomePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PemanduhomePage');
+    this.getPemanduInformation();
   }
 
   navMyHomestay() {
@@ -56,11 +57,19 @@ export class PemanduhomePage {
     this.navCtrl.push("PemanaduprogressPage");
   }
 
-  getPemanduController() {
+  navPemanduDiskusi() {
+    this.navCtrl.push("PemandudiskusiallPage");
+  }
+
+  navPemanduPesanan() {
+    this.navCtrl.push("PemandupesananPage");
+  }
+
+  getPemanduInformation() {
     console.log("masuk controller")
-    console.log(this.userData.BASE_URL+"api/pemandu/homestay")
+    // console.log(this.userData.BASE_URL+"api/pemandu/profile")
     console.log(this.options)
-    this.http.get(this.userData.BASE_URL+'api/pemandu/homestay', this.options).subscribe(data => {
+    this.http.get(this.userData.getBaseURL()+'api/pemandu/currentprofile', this.options).subscribe(data => {
       let response = data.json()
       console.log(response)
       if(response.status == 200) {

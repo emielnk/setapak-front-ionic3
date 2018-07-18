@@ -26,7 +26,6 @@ import { ProfileAccountPage } from '../pages/profileaccount/profileaccount';
 
 //page pemandu
 import { PemanduhistoryPage } from '../pages/pemandu/pemanduhistory/pemanduhistory';
-import { PemandumenuPage } from '../pages/pemandu/pemandumenu/pemandumenu';
 import { PemanduhomePage } from '../pages/pemandu/pemanduhome/pemanduhome';
 import { PemanduregisPage } from '../pages/pemandu/pemanduregis/pemanduregis';
 
@@ -67,7 +66,6 @@ export function getAuthHttp(http, Storage) {
     TabsPage,
     ProfileAccountPage,
     // PemanduhistoryPage,
-    PemandumenuPage,
     PemanduhomePage,
     // PemanadufailedPage,
     // PemanadusuksesPage,
@@ -94,7 +92,6 @@ export function getAuthHttp(http, Storage) {
     TabsPage,
     ProfileAccountPage,
     // PemanduhistoryPage,
-    PemandumenuPage,
     PemanduhomePage,
     // PemanadufailedPage,
     // PemanadusuksesPage,

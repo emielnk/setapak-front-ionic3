@@ -7,11 +7,12 @@ import { AuthHttp } from 'angular2-jwt';
 export class UserData {
   HAS_LOGGED_IN = 'hasLoggedIn';
   HAS_BE_TOUR_GUIDE = 'hasBeTourGuide'
-  BASE_URL = 'setapakbogor.site/';     
+  BASE_URL = "http://127.0.0.1:3000/";     
   data:any;
   idUser: any;
   token: string;
 
+  // http://setapakbogor.site/
   // isi dari userdata yang kesimpen di storage
   // {user_id: 22, 
   // email: "amostiberio@gmail.com", 
@@ -148,6 +149,10 @@ export class UserData {
     return this.storage.get(this.HAS_BE_TOUR_GUIDE).then((value) => {
       return value === true;
     });
+  }
+
+  getBaseURL() {
+    return this.BASE_URL;
   }
 
 

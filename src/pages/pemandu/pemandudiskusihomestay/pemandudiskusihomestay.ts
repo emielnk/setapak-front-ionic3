@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the PemandupesananPage page.
+ * Generated class for the PemandudiskusihomestayPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,19 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-pemandupesanan',
-  templateUrl: 'pemandupesanan.html',
+  selector: 'page-pemandudiskusihomestay',
+  templateUrl: 'pemandudiskusihomestay.html',
 })
-export class PemandupesananPage {
-  tab1: any = "PemandupesananhomestayPage";
-  tab2: any = "PemandupesananservicePage";
-  tab3: any = "PemandupesananprodukPage";
+export class PemandudiskusihomestayPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PemandupesananPage');
+    console.log('ionViewDidLoad PemandudiskusihomestayPage');
   }
 
 }

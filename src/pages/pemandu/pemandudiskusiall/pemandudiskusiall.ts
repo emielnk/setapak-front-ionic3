@@ -14,7 +14,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'pemandudiskusiall.html',
 })
 export class PemandudiskusiallPage {
-
+  tab1: any = "PemandudiskusihomestayPage";
+  tab2: any = "PemandudiskusiservicePage";
+  tab3: any = "PemandudiskusiprodukPage";
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 

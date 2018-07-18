@@ -7,12 +7,16 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>pemandudiskusiall</ion-title>
+    <ion-title>Diskusi Pelanggan</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <ion-tabs tabsPlacement="top">
+    <ion-tab tabTitle="Homestay" [root]="tab1"></ion-tab>
+    <ion-tab tabTitle="Tour Service" [root]="tab2"></ion-tab>
+    <ion-tab tabTitle="Produk Barang" [root]="tab3"></ion-tab>
+  </ion-tabs>
 </ion-content>
